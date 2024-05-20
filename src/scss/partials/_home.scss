@@ -1,0 +1,87 @@
+$primary: #d53232;
+$gray: #696969;
+// text-shadow 애니메이션 정의
+@keyframes textShadowAnimation {
+  0% {
+    text-shadow: 0.125em 0.125em 0 $primary; // 오른쪽과 아래로 그림자 이동 및 크기 증가
+  }
+  50% {
+    text-shadow: 0.125em 0.125em 0 $primary; // 오른쪽과 아래로 그림자 이동 및 크기 증가
+  }
+  100% {
+    text-shadow: 0.125em 0 0 $primary, -0.125em 0 0 $primary,
+      0 0.125em 0 $primary, 0 -0.125em 0 $primary, 0.125em 0.125em 0 $primary,
+      -0.125em -0.125em 0 $primary, 0.125em -0.125em 0 $primary,
+      -0.125em 0.125em 0 $primary;
+  }
+}
+
+#home {
+  height: calc(100vh);
+  position: relative;
+  margin-top: 56px;
+
+  @media (min-width: 768px) {
+    // 추가적인 미디어 쿼리 스타일
+  }
+
+  > div {
+    height: 100%;
+  }
+
+  .home-content {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      // background-color: #003267; // 주석 처리된 부분, 필요에 따라 색상 변경
+      opacity: 0.4;
+    }
+
+    .intro {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      position: relative;
+      z-index: 2;
+
+      .title {
+        font-weight: bold;
+        font-family: Galmuri9, sans-serif;
+        text-shadow: 1.5em 1.5em $primary;
+        // text-shadow 애니메이션 적용 (한 번만 실행)
+        animation: textShadowAnimation 2s 1;
+        animation-fill-mode: forwards;
+        @media (min-width: 768px) {
+          font-size: 9.3rem;
+        }
+      }
+
+      .sub {
+        padding-top: 20px;
+        padding-bottom: 25px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        span {
+          display: block;
+          position: relative;
+        }
+      }
+      .btns > a {
+        margin-right: 15px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

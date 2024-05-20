@@ -1,0 +1,31 @@
+$primary: #d53232;
+#services {
+  background-color: #f6f8fb;
+}
+.service-box {
+  padding: 2rem;
+  border: 1px solid #eef1f5;
+  // box-shadow: 2px 2px 4px #e9ebef;
+  margin-bottom: 1rem;
+  background: white;
+  .service-icon {
+    font-size: 2rem;
+    color: #d53232;
+  }
+  .service-body {
+    .service-title {
+      font-size: 1.1rem;
+      color: #4e4e4e;
+      margin-bottom: 1.2rem;
+    }
+    span {
+      color: #d53232;
+      font-size: 2.1rem;
+      padding-right: 10px;
+    }
+    .service-description {
+      font-size: 0.9rem;
+      color: #6f6f6f;
+    }
+  }
+}
