@@ -1,0 +1,10 @@
+{
+    "response": {
+        "status": 200,
+        "message": "로그인 성공",
+        "username": "dswhdcks",
+        "email": "dswhdcks@naver.com",
+        "comment": "안녕하세요!",
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcnZpc29yQHRlc3QuY29tIiwiYXV0aCI6IlJPTEVfU1VQRVJWSVNPUiJ9.bfVj9stm_9WkGZ4R0RdqrQ-5YFe0QLTrldEB0HzCfttTug1T9NTSKuBCxXOYSMysMw9rZJsgsgE_rsH3Xv72fQ"
+    }
+}
